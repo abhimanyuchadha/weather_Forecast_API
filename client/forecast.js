@@ -14,16 +14,10 @@ function forecast() {
     clearTable(TPtable);
     
     date=date.replace(new RegExp('-', 'g'),"");
-    var localhost="localhost:1201";
-    var server="18.221.165.2";
-
-    var ip=server;
-
-//    var address="http://"+ip+"/weather/forecast/"+date;
+ 
     var address="/weather/forecast/"+date;
     callRestService(address, table, ourResultHead, "Our Results", "our");    
 
-//   var TPAddress="http://"+ip+"/weather/forecast/thirdParty/"+date;
    var TPAddress="/weather/forecast/thirdParty/"+date;
     callRestService(TPAddress, TPtable, darkSkyHeading, "Results from DarkSky API","thirdParty");   
    
