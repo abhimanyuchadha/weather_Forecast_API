@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>Weather Forecast</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+    <script src="forecast.js"></script>
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron" >
+            
+            <h1>Weather Forecasting</h1>
+            
+            <img src="images/cloudy.png" class="img-circle" alt="Cinque Terre" width="50"> 
+            <img src="images/sun.png" class="img-circle" alt="Cinque Terre" width="50"> 
+            
+            <img src="images/rainy.png" class="img-circle" alt="Cinque Terre" width="50"> 
+           
+            <img src="images/snow.png" class="img-circle" alt="Cinque Terre" width="50"> 
+            <p>An interface to forecast weather of next seven days from a chosen date</p>
+            <p>Select a date to check the weather for the next seven days!!!</p>
+        </div>
+        
+        
+
+        <div class="container-fl">            
+            <div class='col-sm-6' >
+            <input id="date" type="date" class="form-control" style="width: 30%; float: right">
+            
+            </div>
+            <div  style="float: left">
+            <button class="btn btn-success" onclick="forecast()"> forecast</button>
+            </div>
+        </div>
+<br><br>
+        
+        <div class='col-sm-6' style="float: left">
+            
+            <h3 id="ourResultHeading"> </h3>
+            <br>
+            
+        <table id="weatherTable" class="table table-striped "  >
+            <!-- <thead class="thead-dark">-->
+                <tr>
+                    <th></th>
+                    <th>Date (YYYY-MM-DD)</th>
+                    <th>Max Temp (°F)</th>
+                    <th>Min Temp (°F)</th>
+                </tr>
+            
+           
+        </table>
+        </div>
+        
+        <div class='col-sm-6' style="float: right">
+            
+            <h3 id="darkSkyHeading"> </h3>
+            <br>
+        <table id="weatherTableThirdParty" class="table table-striped "  >
+           <tr>
+                    <th></th>
+                    <th>Date (YYYY-MM-DD)</th>
+                    <th>Max Temp (°F)</th>
+                    <th>Min Temp (°F)</th>
+                </tr>
+            
+        
+        </table>
+       
+        
+    </div>
+         </div>
+        
+            <div class='container'>
+                <div class="col-sm-6" style="float: left">
+                    <div  id="our">   </div>
+                </div>
+                
+                <div class="col-sm-6" style="float: right">
+                    <div id="thirdParty"></div>
+                </div>
+        </div>
+        
+</body>
+</html>
